@@ -16,7 +16,7 @@
     <form>
         <label for="celsius">Enter temperature in Celsius:</label>
         <input type="number" id="celsius" placeholder="Celsius" step="0.01">
-        <input type="button" value="Convert" onclick="convertTemperature()">
+        <input type="button" value="Convert" onSubmit="convertTemperature()">
     </form>
     <p id="tempResult"></p>
 
@@ -25,7 +25,7 @@
     <form>
         <label for="marla">Enter area in Marla:</label>
         <input type="number" id="marla" placeholder="Marla" step="0.01">
-        <input type="button" value="Convert" onclick="convertMarla()">
+        <input type="button" value="Convert" onSubmit="convertMarla()">
     </form>
     <p id="marlaResult"></p>
 
@@ -34,28 +34,28 @@
     <form>
         <label for="yards">Enter area in Yards:</label>
         <input type="number" id="yards" placeholder="Yards" step="0.01">
-        <input type="button" value="Convert" onclick="convertYards()">
+        <input type="button" value="Convert" onSubmit="convertYards()">
     </form>
     <p id="yardsResult"></p>
 
     <script>
         
         function convertTemperature() {
-            const celsius = parseInt(document.getElementById('celsius').value);
+            const celsius = parsefloat(document.getElementById('celsius').value);
             const fahrenheit = (celsius * 9/5) + 32;
             document.getElementById('tempResult').innerHTML = `Temperature in Fahrenheit: ${fahrenheit.toFixed(2)} °F`;
         }
 
        
         function convertMarla() {
-            const marla = parseInt(document.getElementById('marla').value);
+            const marla = parsefloat(document.getElementById('marla').value);
             const squareFeet = marla * 272.25; 
             document.getElementById('marlaResult').innerHTML = `Area in Square Feet: ${squareFeet.toFixed(2)} sq. ft`;
         }
 
         
         function convertYards() {
-            const yards = parseInt(document.getElementById('yards').value);
+            const yards = parsefloat(document.getElementById('yards').value);
             const squareFeet = yards * 9; 
             document.getElementById('yardsResult').innerHTML = `Area in Square Feet: ${squareFeet.toFixed(2)} sq. ft`;
         }
