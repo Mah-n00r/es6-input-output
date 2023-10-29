@@ -11,7 +11,7 @@
 <body>
     <h1>Unit Converters</h1>
 
-    <!-- Temperature Converter -->
+   
     <h2>Temperature Converter</h2>
     <form>
         <label for="celsius">Enter temperature in Celsius:</label>
@@ -20,7 +20,7 @@
     </form>
     <p id="tempResult"></p>
 
-    <!-- Marla to Square Feet Converter -->
+   
     <h2>Marla to Square Feet Converter</h2>
     <form>
         <label for="marla">Enter area in Marla:</label>
@@ -29,7 +29,7 @@
     </form>
     <p id="marlaResult"></p>
 
-    <!-- Yards to Square Feet Converter -->
+   
     <h2>Yards to Square Feet Converter</h2>
     <form>
         <label for="yards">Enter area in Yards:</label>
@@ -39,24 +39,24 @@
     <p id="yardsResult"></p>
 
     <script>
-        // Temperature Converter
+        
         function convertTemperature() {
             const celsius = parseFloat(document.getElementById('celsius').value);
             const fahrenheit = (celsius * 9/5) + 32;
             document.getElementById('tempResult').innerHTML = `Temperature in Fahrenheit: ${fahrenheit.toFixed(2)} °F`;
         }
 
-        // Marla to Square Feet Converter
+       
         function convertMarla() {
             const marla = parseFloat(document.getElementById('marla').value);
-            const squareFeet = marla * 272.25; // 1 Marla = 272.25 square feet
+            const squareFeet = marla * 272.25; 
             document.getElementById('marlaResult').innerHTML = `Area in Square Feet: ${squareFeet.toFixed(2)} sq. ft`;
         }
 
-        // Yards to Square Feet Converter
+        
         function convertYards() {
             const yards = parseFloat(document.getElementById('yards').value);
-            const squareFeet = yards * 9; // 1 Yard = 9 square feet
+            const squareFeet = yards * 9; 
             document.getElementById('yardsResult').innerHTML = `Area in Square Feet: ${squareFeet.toFixed(2)} sq. ft`;
         }
     </script>
